@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> highlight bold words in paragraph</title>
+</head>
+<body>
+
+	<!--  button for highlighting the text -->
+	<button onclick="highlightBoldText();">Do you want to highlight bold Click  the button</button>
+
+	<p>International Business Machines Corporation (IBM)  <b>is an American multinational information technology company headquartered in Armonk, </b> New York, with operations in over 170 countries. <b>The company began in 1911, founded in Endicott, New York,</b> as the Computing-Tabulating-Recording Company (CTR) and was renamed "International Business Machines" in 1924.</p>
+
+
+
+
+
+	<script type="text/javascript">
+		
+		// varible for bold items
+		var bold_items;
+		function highlightBoldText(){
+			// collect all bold tags in array by using getElementsByTagName()
+			bold_items = document.getElementsByTagName('b');
+			// iterate through the array 
+			for (var i = 0; i < bold_items.length; i++) {
+				// change the style where bold tag elements found
+				bold_items[i].style.color = "yellow";
+			}
+		}
+	</script>
+
+</body>
+</html>

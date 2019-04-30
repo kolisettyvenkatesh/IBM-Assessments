@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Converts the first letter of each word of a string in upper case</title>
+</head>
+<body>
+
+	<!-- JavaScript function that accepts a string as a parameter and converts the first letter of each word of the string in upper case. -->
+<script type="text/javascript">     
+
+function uppercase(str)
+{
+  var array1 = str.split(' ');
+  var newarray1 = [];
+    
+  for(var x = 0; x < array1.length; x++)
+
+
+  {
+      newarray1.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1));  
+
+         // The charAt() method is used to get the specified character from a string.
+         // The toUpperCase() method is used to convert the string value to uppercase.
+         // he slice() method returns a shallow copy of a portion of an array into a new array object.
+         // The push() method is used to add one or more elements to the end of an array and returns the new length of the array.
+         // The join() method joins all elements of an array into a string.
+
+
+  }
+  return newarray1.join(' ');
+}
+document.write(uppercase("ibm is an multi national company"));
+
+</script>
+
+</body>
+</html>
+

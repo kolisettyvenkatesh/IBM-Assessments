@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Find the longest word within a string</title>
+</head>
+<body>
+ <script type="text/javascript">
+ 	function find_longest_word(str)
+{
+
+	// The match() method is used to retrieve the matches when matching a string against a regular expression.
+  var array1 = str.match(/\w[a-z]{0,}/gi);
+  var result = array1[0];
+
+  for(var x = 1 ; x < array1.length ; x++)
+  {
+    if(result.length < array1[x].length)
+    {
+    result = array1[x];
+    } 
+  }
+  return result;
+}
+document.write(find_longest_word('ibm is the biggest company'));
+ </script>
+ 
+</body>
+</html>
