@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Limit the characters in textbox</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<input type="text" id="inputText" placeholder="Enter text here" style="height: 30px;">
+	<h3><p id="remChar"></p></h3>
+	<script type="text/javascript">
+		$(document).ready(function() 
+		{
+			$('#inputText').keypress(function() 
+			{
+				var t = $('#inputText').val();
+				//console.log(t);
+				var len = $('#inputText').val().length;
+				//console.log(len);
+				 var maxlen=20;
+				 if (len>20) {
+				 // 	$('#inputText').attr({
+				 // 		disabled: 'disabled'});
+					// $('#remChar').html('Character limit is 20');
+					$('inputText').val($('inputText').val().substring(0,20));
+				 } else
+				  {
+				  	$('#remChar').html('Remaining characters: '+ (maxlen-len));
+				  }
+				
+			});
+		});
+	</script>
+</body>
+</html>

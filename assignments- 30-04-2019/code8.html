@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Highlight all elements that are disabled</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<h3>Click to highlight all the elements that are disabled.</h3>
+<div id="div1">
+<input type="text" class="element1" placeholder="Enter text here...">
+<input type="text" class="element1" placeholder="Enter text here..." disabled="true">
+<button class="element1">Button1</button>
+<button class="element1" disabled="true">Button2</button><br><br>
+<button id="click-btn">Click!</button>
+</div>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#click-btn').click(function() 
+		{
+			$.each($('.element1'),function(index) 				
+			{
+				console.log(index);
+				if ($(this).prop('disabled')==true) 
+				{
+                    $(this).css('background-color', 'yellow');
+                }
+			
+			});
+		});
+	});
+</script>
+</body>
+</html>

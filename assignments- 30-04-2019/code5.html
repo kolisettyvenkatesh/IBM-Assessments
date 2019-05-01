@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Delaying the items in the animationn queue</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+    
+     <button class="mybutton"> click me </button> 
+
+	<div class="Container" style="border: 1px solid #000; background-color: blue; margin-right: 0px ; padding: 10px; position: absolute; left: 0; bottom: 0; width: 100px; height: 80px;">
+	Trying some JQuery fun here...
+</div>
+	<script type="text/javascript">
+       $(document).ready(function() {
+       	 
+             $(".mybutton").click(function() {
+			// $(".moreTextContainer").animate({left: '100px'}, 'slow');
+			// $(".moreTextContainer").animate({height: '200px', width: '300px'}, 5000);
+			// $(".moreTextContainer").animate({height: 'toggle'}, 5000);
+
+			//Using animate with a queue
+			$(".Container").animate({height: '200px'}, 'slow');
+			$(".Container").animate({opacity: '0.2'}, 'slow');
+			$(".Container").animate({width: '200px'}, 'slow');
+			$(".Container").animate({height: '80px'}, 'slow');
+			$(".Container").animate({opacity: '1'}, 'slow');
+			$(".Container").animate({width: '100px'}, 'slow');
+		});
+
+    });
+
+	</script>
+
+</body>
+</html>
